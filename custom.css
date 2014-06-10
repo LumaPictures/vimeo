@@ -3,8 +3,10 @@
 }
 
 .content {
+	position: relative;
 	margin: 0 auto;
 	width: 80%;
+	margin-top: 50px;
 }
 
 iframe {
@@ -12,19 +14,11 @@ iframe {
 }
 
 #video_navigation {
-	position: absolute;
-	bottom: 0px;
+	position: relative;
 	width: 100%;
 	background-color: #cdcdcd;
 	border-color: black;
-	box-shadow: 0px 5px 5px #545454 inset;
-	z-index: 1000;
-}
-
-.thumbnails 
-
-.thumbnails img {
-	border-image-width: 0;
+	box-shadow: inset 0px 5px 5px #545454, 0px 5px 5px #545454;
 }
 
 #logo {
