@@ -1,19 +1,16 @@
-if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "Welcome to example.";
-  };
+if( Meteor.isClient ) {
+  UI.body.rendered = function () {
+    $('body').css('font-family','Oswald');
+  }
 
-  Template.hello.events({
-    'click input': function () {
-      // template data, if any, is available in 'this'
-      if (typeof console !== 'undefined')
-        console.log("You pressed the button");
+  Template.download.rendered = function () {
+    Session.set("showDownloads", false);
+  }
+
+  Template.download.events({
+    "click .toggle_download": function( event, template ) {
+      event.preventDefault();
+      $(".info_download").toggle();
     }
-  });
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
   });
 }
